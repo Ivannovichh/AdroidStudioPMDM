@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculadora_canina">Doggy Calculator</string>
+    <string name="introduzca_su_edad">Introduce your age:</string>
+    <string name="edad">Age</string>
+    <string name="calcular">CALCULATE</string>
+    <string name="EdadPerro">If you were a dog, you would have %d years</string>
+    <string name="hint">0</string>
+    <string name="Location_Chip">The dog´s chip is: %d</string>
+</resources>
