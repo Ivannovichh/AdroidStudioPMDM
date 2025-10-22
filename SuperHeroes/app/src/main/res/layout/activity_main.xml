@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Root layout for the activity, using RelativeLayout to position elements relative to each other -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Data binding section, currently empty as no variables are defined -->
+    <data>
+
+    </data>
+
+    <!-- Main container with padding and full-screen dimensions -->
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:padding="16dp">
+
+        <!-- ImageView for displaying the superhero's image -->
+        <ImageView
+            android:id="@+id/hero_image"
+            android:layout_width="128dp"
+            android:layout_height="133dp"
+            android:src="@drawable/fotocamara" />
+
+        <!-- EditText for entering the superhero's name, positioned to the right of the image -->
+        <EditText
+            android:id="@+id/hero_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/hero_image"
+            android:layout_alignTop="@id/hero_image"
+            android:layout_marginTop="10dp"
+            android:hint="@string/superhero_name"
+            />
+
+        <!-- EditText for entering the superhero's alter ego, aligned to the bottom of the image -->
+        <EditText
+            android:id="@+id/hero_ego_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/hero_image"
+            android:layout_alignBottom="@id/hero_image"
+            android:layout_marginTop="16dp"
+            android:hint="@string/superhero_ego"
+            />
+
+        <!-- Horizontal divider line for visual separation -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/hero_image"
+            android:background="@color/black"
+            />
+
+        <!-- TextView for the biography section label, centered -->
+        <TextView
+            android:id="@+id/bio_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/bio"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <!-- EditText for entering the superhero's biography -->
+        <EditText
+            android:id="@+id/hero_power_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bio_text"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:hint="@string/BioAdd"/>
+
+        <!-- TextView for the power rating section label, centered -->
+        <TextView
+            android:id="@+id/power_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hero_power_edit"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/power"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <!-- RatingBar for selecting the superhero's power level with stars -->
+        <RatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/power_text"
+            android:layout_marginTop="12dp"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:progressTint="@color/yellow"
+            android:rating="3" />
+
+        <!-- Button to save the entered data, positioned at the bottom -->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="@string/save"
+            android:backgroundTint="@color/purple"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+</layout>

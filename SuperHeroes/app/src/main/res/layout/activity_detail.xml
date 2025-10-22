@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailActivity">
+
+        <!-- Imagen del superheroe-->
+
+        <ImageView
+            android:id="@+id/heroView"
+            android:layout_width="430dp"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:srcCompat="@drawable/luffi" />
+
+        <!-- Nombre del superheroe-->
+
+        <TextView
+            android:id="@+id/hero_name"
+            android:layout_width="406dp"
+            android:layout_height="wrap_content"
+            android:text="@string/hero_name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="224dp" />
+
+        <TextView
+            android:id="@+id/Alterego_text"
+            android:layout_width="406dp"
+            android:layout_height="wrap_content"
+            android:text="@string/alter_ego"
+            android:textColor="@color/grey"
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="291dp" />
+
+        <TextView
+            android:id="@+id/AlterEgo"
+            android:layout_width="406dp"
+            android:layout_height="wrap_content"
+            android:text="@string/alter_ego"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="318dp" />
+
+        <TextView
+            android:id="@+id/Bio"
+            android:layout_width="406dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bio"
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="378dp" />
+
+        <TextView
+            android:id="@+id/BioDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/descripcion_de_la_bio"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Bio" />
+
+        <TextView
+            android:id="@+id/Poder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:text="@string/power_text"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BioDescription" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:numStars="5"
+            android:progressTint="@color/yellow"
+            android:rating="4.5"
+            android:stepSize="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Poder" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
