@@ -1,24 +1,36 @@
 package es.medac.superheroes;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import es.medac.superheroes.databinding.ActivityDetailBinding;
 
 public class DetailActivity extends AppCompatActivity {
+    public static final String SUPERHERO_KEY = "superhero";
+    public static final String BITMAP_KEY = "bitmap";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_detail);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        //Vincula esta activity con su Layout
+        ActivityDetailBinding binding = ActivityDetailBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        //Obtiene datos  enviades desde la activity anterior
+        Bundle extras = getIntent().getExtras();
+        Superhero superhero = extras.getParcelable(SUPERHERO_KEY);
+        Bitmap bitmap = extras.getParcelable(BITMAP_KEY);
+
+        //Si hay imagen, se muestra en el ImageView del layout
+        if (bitmap != null) {
+            binding.heroView.setImageBitmap(bitmap);
+        }
+
+        //Vincula el objeto superhero con el layout gracias a dataBinding
+        //Esto hace que los textView del XML se rellenen ¡
+        binding.setSuperhero(superhero);
     }
 }

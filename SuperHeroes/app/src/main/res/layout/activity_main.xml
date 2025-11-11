@@ -2,11 +2,16 @@
 <!-- Root layout for the activity, using RelativeLayout to position elements relative to each other -->
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
 
     <!-- Data binding section, currently empty as no variables are defined -->
     <data>
-
+        <!-- Puedes agregar variables o imports aquí si usas DataBinding -->
+        <variable
+            name = "superhero"
+            type = "es.medac.superheroes.Superhero"
+            />
     </data>
 
     <!-- Main container with padding and full-screen dimensions -->
@@ -15,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity"
+        android:backgroundTint="@color/white"
         android:padding="16dp">
 
         <!-- ImageView for displaying the superhero's image -->
@@ -22,7 +28,7 @@
             android:id="@+id/hero_image"
             android:layout_width="128dp"
             android:layout_height="133dp"
-            android:src="@drawable/fotocamara" />
+            android:src="@drawable/fotocamara"/>
 
         <!-- EditText for entering the superhero's name, positioned to the right of the image -->
         <EditText
@@ -32,6 +38,8 @@
             android:layout_toEndOf="@+id/hero_image"
             android:layout_alignTop="@id/hero_image"
             android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:hint="@string/superhero_name"
             />
 
@@ -43,8 +51,9 @@
             android:layout_toEndOf="@+id/hero_image"
             android:layout_alignBottom="@id/hero_image"
             android:layout_marginTop="16dp"
-            android:hint="@string/superhero_ego"
-            />
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:hint="@string/superhero_ego"/>
 
         <!-- Horizontal divider line for visual separation -->
         <View
@@ -53,8 +62,7 @@
             android:layout_height="1dp"
             android:layout_marginTop="16dp"
             android:layout_below="@id/hero_image"
-            android:background="@color/black"
-            />
+            android:background="@color/black"/>
 
         <!-- TextView for the biography section label, centered -->
         <TextView
@@ -76,6 +84,7 @@
             android:layout_below="@id/bio_text"
             android:layout_marginTop="8dp"
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:hint="@string/BioAdd"/>
 
         <!-- TextView for the power rating section label, centered -->
@@ -105,7 +114,7 @@
 
         <!-- Button to save the entered data, positioned at the bottom -->
         <Button
-            android:id="@+id/button"
+            android:id="@+id/saveButton"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
