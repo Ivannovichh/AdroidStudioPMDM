@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B1021"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="30dp">
+
+        <ImageView
+            android:id="@+id/imgDetalleGrande"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground"
+            android:background="#151E32"/>
+
+        <TextView
+            android:id="@+id/txtDetalleModelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MODELO AVIÓN"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:padding="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:background="#151E32"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FICHA TÉCNICA"
+                android:textColor="#00E5FF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="10dp"/>
+
+            <TextView
+                android:id="@+id/txtDetalleFabricante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fabricante: -"
+                android:textColor="#B0BEC5"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/txtDetallePais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pais: -"
+                android:textColor="#B0BEC5"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/txtDetalleVelocidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vel. Maxima: -"
+                android:textColor="#B0BEC5"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/txtDetalleCapacidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Capacidad: -"
+                android:textColor="#B0BEC5"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/txtDetallePeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso Max: -"
+                android:textColor="#B0BEC5"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/txtDetalleDimensiones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dimensiones: -"
+                android:textColor="#B0BEC5"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VOLVER AL HANGAR"
+            android:backgroundTint="#00E5FF"
+            android:textColor="#000000"
+            android:layout_margin="20dp"/>
+    </LinearLayout>
+</ScrollView>
