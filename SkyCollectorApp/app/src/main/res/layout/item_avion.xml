@@ -2,6 +2,7 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardContainer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -20,7 +21,7 @@
             android:id="@+id/imgAvion"
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             android:src="@android:drawable/ic_menu_gallery"
             app:layout_constraintTop_toTopOf="parent"/>
 
@@ -28,33 +29,36 @@
             android:id="@+id/txtRareza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LEGENDARY"
-            android:textSize="10sp"
-            android:textStyle="bold"
-            android:textColor="#000"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_rarity_badge"
             android:paddingHorizontal="6dp"
             android:paddingVertical="2dp"
-            android:background="@drawable/bg_rarity_badge"
-            android:layout_margin="8dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:text="LEGENDARY"
+            android:textColor="#000"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="12dp">
+            android:padding="12dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
 
             <TextView
                 android:id="@+id/txtModelo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
                 android:text="Modelo Avión"
                 android:textColor="#E0E0E0"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:maxLines="1"
-                android:ellipsize="end"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtFabricante"
@@ -62,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:text="Fabricante"
                 android:textColor="#90A4AE"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

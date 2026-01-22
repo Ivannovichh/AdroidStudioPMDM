@@ -45,11 +45,9 @@ public class AvionGenerator {
             new AvionData("Airbus A380", "Airbus", "EPIC", R.drawable.airbus_a380, "1020 km/h", "853 pax", "79m", "Europa", "575t"),
             new AvionData("Boeing 747-400", "Boeing", "EPIC", R.drawable.boeing_747, "988 km/h", "416 pax", "64m", "EE.UU.", "396t"),
             new AvionData("F-35 Lightning II", "Lockheed Martin", "EPIC", R.drawable.f35, "1960 km/h", "1 piloto", "10m", "EE.UU.", "31t"),
-           /* new AvionData("Concorde", "BAC", "EPIC", R.drawable.concorde, "2179 km/h", "100 pax", "25m", "UK/Francia", "185t"),
-            new AvionData("AH-64 Apache", "Boeing", "EPIC", R.drawable.apache_ah64, "293 km/h", "2 pilotos", "14m", "EE.UU.", "10t"),
+           /*new AvionData("AH-64 Apache", "Boeing", "EPIC", R.drawable.apache_ah64, "293 km/h", "2 pilotos", "14m", "EE.UU.", "10t"),
             new AvionData("V-22 Osprey", "Bell Boeing", "EPIC", R.drawable.v22_osprey, "509 km/h", "24 tropas", "17m", "EE.UU.", "27t"),
             new AvionData("F/A-18 Super Hornet", "Boeing", "EPIC", R.drawable.fa18_hornet, "1915 km/h", "1 piloto", "18m", "EE.UU.", "29t"),
-            new AvionData("Su-57 Felon", "Sukhoi", "EPIC", R.drawable.su57, "2130 km/h", "1 piloto", "19m", "Rusia", "35t"),
             new AvionData("Antonov An-124", "Antonov", "EPIC", R.drawable.an124, "865 km/h", "Carga", "69m", "URSS", "405t"),
             new AvionData("Airbus Beluga XL", "Airbus", "EPIC", R.drawable.beluga_xl, "737 km/h", "Carga Esp.", "63m", "Europa", "227t"),
             new AvionData("Boeing Dreamlifter", "Boeing", "EPIC", R.drawable.dreamlifter, "878 km/h", "Carga Esp.", "71m", "EE.UU.", "364t"),
@@ -68,17 +66,12 @@ public class AvionGenerator {
             new AvionData("X-15", "North American", "LEGENDARY", R.drawable.x15, "7274 km/h", "1 piloto", "15m", "EE.UU.", "15t"),
             new AvionData("Fokker Dr.I (Barón Rojo)", "Fokker", "LEGENDARY", R.drawable.fokker_dr1, "185 km/h", "1 piloto", "5.7m", "Alemania", "586kg"),
             new AvionData("Me 262", "Messerschmitt", "LEGENDARY", R.drawable.me262, "900 km/h", "1 piloto", "10m", "Alemania", "7t"),
-            new AvionData("Rutan Voyager", "Rutan", "LEGENDARY", R.drawable.voyager, "196 km/h", "2 pilotos", "8.9m", "EE.UU.", "4t"),
+            new AvionData("Rutan Voyager", "Rutan", "       LEGENDARY", R.drawable.voyager, "196 km/h", "2 pilotos", "8.9m", "EE.UU.", "4t"),
             new AvionData("Spirit of St. Louis", "Ryan", "LEGENDARY", R.drawable.spirit_of_st_louis, "214 km/h", "1 piloto", "8m", "EE.UU.", "2t"),
             new AvionData("Harrier Jump Jet", "Hawker Siddeley", "LEGENDARY", R.drawable.harrier, "1176 km/h", "1 piloto", "14m", "UK", "11t")
+            new AvionData("Concorde", "BAC", "LEGENDARY", R.drawable.concorde, "2179 km/h", "100 pax", "25m", "UK/Francia", "185t"),
+            new AvionData("Su-57 Felon", "Sukhoi", "LEGENDARY", R.drawable.su57, "2130 km/h", "1 piloto", "19m", "Rusia", "35t"),
     */};
-
-    // --- LÓGICA DE GENERACIÓN ---
-    public static Avion generarAleatorio() {
-        Random r = new Random();
-        AvionData d = DATOS_AVIONES[r.nextInt(DATOS_AVIONES.length)];
-        return new Avion(d.modelo, d.fabricante, d.rareza, d.imgId, d.vel, d.cap, d.dim, d.pais, d.peso);
-    }
 
     // --- CLASE INTERNA PARA ORGANIZAR DATOS ---
     private static class AvionData {
@@ -87,5 +80,12 @@ public class AvionGenerator {
         AvionData(String m, String f, String r, int i, String v, String c, String d, String p, String pe) {
             modelo=m; fabricante=f; rareza=r; imgId=i; vel=v; cap=c; dim=d; pais=p; peso=pe;
         }
+    }
+    public static java.util.List<Avion> getTodosLosAviones() {
+        java.util.List<Avion> lista = new java.util.ArrayList<>();
+        for (AvionData d : DATOS_AVIONES) {
+            lista.add(new Avion(d.modelo, d.fabricante, d.rareza, d.imgId, d.vel, d.cap, d.dim, d.pais, d.peso));
+        }
+        return lista;
     }
 }
