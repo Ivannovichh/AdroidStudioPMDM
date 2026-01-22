@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="cyan">#91EDBD</color>
+    <color name="grey">#545454</color>
+    <color name="lila">#AA24DE</color>
+    <color name="orange">#EF965A</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="EdadPerro">Si usted fuera perro tendría %d años\n</string>
+    <string name="Location_Chip">El chip del perro es: %d</string>
+    <string name="app_name" translatable="false">MiEdadCanina</string>
+    <string name="calculadora_canina">Calculadora Canina</string>
+    <string name="calcular">CALCULAR</string>
+    <string name="edad">Edad</string>
+    <string name="hint">0</string>
+    <string name="introduzca_su_edad">Introduzca su edad:</string>
+    <style name="Base.Theme.MiEdadCanina" parent="Theme.Material3.DayNight.NoActionBar"/>
+    <style name="CalculatorButton" parent="Widget.MaterialComponents.Button"> 
+        
+        <item name="android:layout_width">0dp</item>
+        
+        <item name="android:layout_height">wrap_content</item>
+        
+        <item name="android:layout_columnWeight">1</item>
+        
+        <item name="android:layout_gravity">fill_horizontal</item>
+        
+        <item name="android:layout_margin">6dp</item>
+        
+        <item name="android:padding">12dp</item>
+        
+        <item name="android:fontFamily">monospace</item>
+        
+        <item name="android:textSize">22sp</item>
+        
+        <item name="android:textColor">@color/white</item>
+        
+        <item name="android:backgroundTint">@color/lila</item>
+        
+        <item name="android:elevation">4dp</item>
+
+        
+        <item name="cornerRadius">100dp</item>
+    </style>
+    <style name="CalculatorButtonPrimary" parent="CalculatorButton">
+        
+        <item name="android:backgroundTint">@color/orange</item>
+    </style>
+    <style name="Theme.MiEdadCanina" parent="Base.Theme.MiEdadCanina"/>
+</resources>

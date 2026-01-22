@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "es.medac.miedadcanina.app-mergeDebugResources-35:/values-en/values-en.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Usuario1\\Documents\\GitHub\\PMDM\\MiEdadCanina\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "from": {
+                        "startLines": "6,8,2,5,4,7,3",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "276,394,57,228,190,358,122",
+                        "endColumns": "80,63,63,46,36,34,66",
+                        "endOffsets": "352,453,116,270,222,388,184"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,136,200,264,311,348,383",
+                        "endColumns": "80,63,63,46,36,34,66",
+                        "endOffsets": "131,195,259,306,343,378,445"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "es.medac.miedadcanina.app-mergeDebugResources-36:/layout/activity_main.xml",
+        "source": "es.medac.miedadcanina.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario1\\.gradle\\daemon\\8.13\\es.medac.miedadcanina.app-mergeDebugResources-36:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Usuario1\\.gradle\\daemon\\8.13\\es.medac.miedadcanina.app-main-39:\\layout\\activity_main.xml"
+    }
+]
